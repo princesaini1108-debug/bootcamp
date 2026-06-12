@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex</title>
+    <style>
+        .cont>div{
+            width: 50px;
+            border:1px solid red;
+            font-size: 30px;
+            padding:30px;
+        }
+        .cont>div:nth-child(1){
+            background-color:navy;
+        }
+        .cont>div:nth-child(2){
+            background-color:bisque;
+        }
+        .cont>div:nth-child(3){
+            background-color:teal;
+        }
+
+        .cont{
+            border:1px solid black;
+            padding: 20px;
+            margin: 20px;
+            height: 500px;
+            background-color: #24cdeb;
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+        }
+
+            
+    </style>
+</head>
+<body>
+    <h1>Welcome to CSS Flexbox</h1>
+    <div class="cont">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
