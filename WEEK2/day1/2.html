@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1 id="head">hello from heading tag</h1>
+</body>
+</html>
+<script>
+    // step1 select/catch the element
+    const element=document.getElementById("head");
+    console.log(element);
+    
+    // step2 get/read values from element
+
+    const content=element.innerText;
+    console.log(content);
+
+    // step3 write/update values from element
+
+    element.innerHTML="hello world"
+    
+</script>
