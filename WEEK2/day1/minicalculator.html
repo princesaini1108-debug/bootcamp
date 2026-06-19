@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator UI</title>
+</head>
+<body>
+
+    <input type="number" id="n1" placeholder="enter 1st Number">
+    <input type="number" id="n2" placeholder="enter 2nd Number">
+
+    <br><br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+</body>
+</html>
+
+<script>
+    function add(){
+        const n1=document.getElementById("n1");
+        const n2=document.getElementById("n2");
+        const data1=Number(n1.value)
+        const data2=Number(n2.value)
+        const add=data1+data2
+        console.log(add);
+        
+
+    }
+    function sub(){
+        const n1=document.getElementById("n1");
+        const n2=document.getElementById("n2");
+        const data1=n1.value
+        const data2=n2.value
+        const add=data1-data2
+        console.log(add);
+    }
+    function mul(){
+        const n1=document.getElementById("n1");
+        const n2=document.getElementById("n2");
+        const data1=n1.value
+        const data2=n2.value
+        const add=data1*data2
+        console.log(add);
+    }
+    function divide(){
+        const n1=document.getElementById("n1");
+        const n2=document.getElementById("n2");
+        const data1=n1.value
+        const data2=n2.value
+        const add=data1/data2
+        console.log(add);
+    }
+</script>

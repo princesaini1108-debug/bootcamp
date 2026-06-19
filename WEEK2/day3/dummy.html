@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <!-- <style>
+        .slidebox {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .slide.active { opacity: 1; }
+
+        .btn { text-align: center; margin-top: 12px; }
+
+        button { padding: 8px 18px; margin: 4px; cursor: pointer; }
+    </style> -->
+</head>
+
+<body>
+
+    <div class="slidebox">
+        <img class="slide active" src="https://picsum.photos/seed/1/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/2/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/3/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/4/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/5/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/6/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/7/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/8/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/9/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/10/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/11/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/12/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/13/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/14/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/15/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/16/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/17/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/18/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/19/600/300" alt="">
+        <img class="slide" src="https://picsum.photos/seed/20/600/300" alt="">
+    </div>
+
+    <div class="btn">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="next">Next</button>
+        <button id="prev">Previous</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let i = 0, timer;
+
+        function show(n) {
+            slides[i].classList.remove('active');
+            slides[i = n].classList.add('active');
+        }
+
+        function next() { show((i + 1) % slides.length); }
+        function prev() { show((i - 1 + slides.length) % slides.length); }
+
+        document.getElementById('start').addEventListener('click', () => { 
+            timer = setInterval(next, 2000); });
+        document.getElementById('stop').addEventListener('click', () => { 
+            clearInterval(timer); });
+        document.getElementById('next').addEventListener('click', () => { 
+            clearInterval(timer); next(); });
+        document.getElementById('prev').addEventListener('click', () => { 
+            clearInterval(timer); prev(); });
+    </script>
+
+</body>
+
+</html>

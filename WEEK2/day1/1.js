@@ -329,16 +329,16 @@ console.log(arr.includes(1));
 
 // 16. Problems on str pattern [Extra]
 
-let str = "hello world";
-let o1 = "world hello";
-let o2 = "dlrow olleh";
-let o3 = "olleh dlrow";
+// let str = "hello world";
+// let o1 = "world hello";
+// let o2 = "dlrow olleh";
+// let o3 = "olleh dlrow";
 
-let ans = str
-  .split(" ")
-  .reverse()
-  .map((el) => {
-    return el.split("").reverse().join("");
-  }).join(" ");
+// let ans = str
+//   .split(" ")
+//   .reverse()
+//   .map((el) => {
+//     return el.split("").reverse().join("");
+//   }).join(" ");
 
-console.log(ans);
+// console.log(ans);

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // 1. save/write data
+
+    localStorage.setItem("name","prince")
+    localStorage.setItem("id",23);
+    localStorage.setItem("hobby",JSON.stringify([1,2,3]));
+
+    // 2.  get/read data
+
+    let nm=JSON.parse(localStorage.getItem("name"));
+    console.log(nm);
+
+    // 3.  remove/delete key value pair
+
+    // localStorage.removeItem("name");
+
+    // 4.  clear
+
+    // localStorage.clear();
+    
+</script>
+
+<!-- dta bhejte time used -- json stringify
+     data lete time used --  json parse  -->
