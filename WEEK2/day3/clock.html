@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digital Clock</title>
+</head>
+
+<body>
+    <h1>DETAIL CLOCK</h1>
+    <p id="clock"></p>
+</body>
+
+</html>
+<script>
+    // const clock = document.querySelector("clock");
+    setInterval((clock) => {
+        // console.log("1")
+        const newdate = new Date();
+        let hours = newdate.getHours();
+        let min = newdate.getMinutes();
+        let sec = newdate.getSeconds();
+
+        let ampm = hours >= 12 ? "PM" : "AM";
+        document.getElementById("clock").innerText = hours + ":" + min + ":" + sec + " " + ampm;
+
+    }, 1000)
+
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>OTP Verification</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+  <h2>Enter OTP</h2>
+  <input type="text" id="otp" placeholder="Enter OTP" maxlength="4" />
+  <button id="submitBtn">Submit</button>
+  <!-- <input  id="submitBtn" type="submit"> -->
+  <p id="message"></p>
+
+</body>
+
+</html>
+
+<script>
+  const submit = document.querySelector("#submitBtn");
+
+  submit.addEventListener("click", function () {
+    const OTP = document.querySelector("#otp").value;
+
+    const prom = new Promise((resolve, reject) => {
+      if (OTP == "1234") {
+        resolve("OTP Matched");
+      } else {
+        reject("Not Matched");
+      }
+    });
+
+    prom
+      .then((msg) => {
+        document.querySelector("#message").innerHTML = msg;
+        document.querySelector("#message").style.color = "green";
+        console.log(msg);
+      })
+      .catch((msg) => {
+        document.querySelector("#message").innerHTML = msg;
+        document.querySelector("#message").style.color = "red";
+        console.log(msg);
+      });
+  });
+</script>
