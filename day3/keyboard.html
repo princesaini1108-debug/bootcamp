@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+    <style>
+        #keyboard{
+            border:1px solid rgba(243, 234, 234, 0.711);
+            padding: 20px;
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            border-radius: 12px;
+            gap: 10px;
+            
+        }
+        #keyboard>div{
+            border:1px solid rgb(114, 111, 111);
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            background-color: #ffffffc0;
+            font-size: 20px;
+            font-weight: 900;
+            /* cursor: pointer; */
+            
+
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        h1{
+            text-align: center;
+        }
+        #enter{
+            grid-area: 3/11/4/13;
+        }
+        #shift{
+            grid-area: 4/11/5/13;
+        }
+        #space{
+            grid-area: 5/5/6/9;
+        }
+        #keyboard>div:hover{
+            cursor: pointer;
+            background-color: #181816cd;
+        }
+        @media (max-width:600px) and (min-width:350px){
+            .keyboard{
+                width:100%;
+            }
+        }
+       
+
+        
+    </style>
+</head>
+<body>
+    <h1>KRMU KEYBOARD</h1>
+    <div id="keyboard">
+        <div>~</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+        <div>Delete</div>
+        <div>tab</div>
+        <div>Q</div>
+        <div>W</div>
+        <div>E</div>
+        <div>R</div>
+        <div>T</div>
+        <div>Y</div>
+        <div>U</div>
+        <div>I</div>
+        <div>O</div>
+        <div>P</div>
+        <div>\</div>
+        <div>Caps</div>
+        <div>A</div>
+        <div>S</div>
+        <div>D</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>J</div>
+        <div>K</div>
+        <div>L</div>
+        <div id="enter">Enter</div>
+        <!-- <div id="enter1">Enter</div> -->
+        <div>Shift</div>
+        <div>Z</div>
+        <div>X</div>
+        <div>C</div>
+        <div>V</div>
+        <div>B</div>
+        <div>N</div>
+        <div>M</div>
+        <div><</div>
+        <div>></div>
+        <div id="shift">Shift</div>
+        <!-- <div id="shift1">Shift</div> -->
+        <div>Windows</div>
+        <div>ctrl</div>
+        <div>option</div>
+        <div>Alt</div>
+        <div id="space">Space</div>
+        <!-- <div id="space1">Space</div> -->
+        <!-- <div id="space2">Space</div> -->
+        <!-- <div id="space3">Space</div> -->
+        <div>alt</div>
+        <div>option</div>
+        <div><</div>
+        <div>></div>
+    </div>
+</body>
+</html>
