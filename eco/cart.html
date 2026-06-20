@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        #root {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        #root>div {
+            /* border:1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        img {
+            width: 100%;
+            height: 350px;
+        }
+
+        button {
+            background-color: rgb(255, 255, 255);
+            color: teal;
+            cursor: pointer;
+            padding: 10px 15px;
+            border:none;
+        }
+    </style>
+</head>
+
+<body>
+<h1>welcome to the kova</h1>
+<div id="root"></div>
+</body>
+</html>
+<script>
+    let cartArr = JSON.parse(localStorage.getItem("cart")) || []
+    displayCart(cartArr)
+    function displayCart(arr) {
+        document.querySelector("#root").innerText=""
+        arr.forEach((el,i) => {
+            const box = document.createElement("div");
+
+            const image = document.createElement("img")
+            image.setAttribute("src", el.image);
+
+            const title = document.createElement("h3");
+            title.innerText = `TITLE: ${el.title}`;
+            // const br=document.createElement("br")
+
+            const category = document.createElement("h3");
+            category.innerText = `CATEGORY: ${el.category}`;
+
+            const description = document.createElement("p");
+            description.innerText = `DESCRIPTION: ${el.description}`;
+
+            const price = document.createElement("button");
+            price.innerText = `Price: ${el.price}`;
+
+            const rate = document.createElement("button");
+            rate.innerText = `Rate: ${el.rating.rate}`;
+
+            const cart = document.createElement("button")
+            cart.innerText = "delete";
+
+            cart.addEventListener("click", function () {
+                // cartArr.push(el);
+                cartArr.splice(i,1)
+                localStorage.setItem("cart", JSON.stringify(cartArr));
+                alert("deleted");
+                displayCart(cartArr)
+
+            })
+
+            box.append(image, title, category, description, price, rate, cart);
+            document.querySelector("#root").append(box)
+
+
+        })
+
+
+
+    }
+
+
+</script>
