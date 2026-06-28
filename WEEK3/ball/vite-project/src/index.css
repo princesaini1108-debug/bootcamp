@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f9;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scoreboard */
+
+.scoreboard {
+  width: 400px;
+  max-width: 90%;
+  background-color: #000;
+  color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scoreboard h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.score-info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Buttons */
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.hit-btn,
+.reset-btn {
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.hit-btn {
+  background-color: #16a34a;
+}
+
+.hit-btn:hover {
+  background-color: #15803d;
+}
+
+.reset-btn {
+  background-color: #dc2626;
+}
+
+.reset-btn:hover {
+  background-color: #b91c1c;
+}
+
+.hit-btn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Result Box */
+
+.result {
+  margin-top: 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.result h2 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+  .buttons {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .hit-btn,
+  .reset-btn {
+    width: 100%;
+  }
+
+  .score-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .scoreboard h1 {
+    font-size: 1.5rem;
+  }
+}
